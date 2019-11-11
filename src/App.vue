@@ -1,33 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
-</template>
-
-<script>
-import HelloWorld from "./components/HelloWorld.vue";
-
-export default {
-  name: "app",
-  components: {
-    HelloWorld
-  }
-};
-</script>
-
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
-<template>
-  <div id="app">
     <b-container fluid>
       <b-row>
         <b-col cols="12">
@@ -36,6 +8,7 @@ export default {
       </b-row>
     </b-container>
     <b-container>
+      <font-awesome-icon @click="raise" icon="plus-circle" size="2x" :style="{ color: 'green' }" />
       <b-row align-h="center" class="mt-3">
         <b-col cols="6">
           <b-jumbotron
@@ -48,7 +21,7 @@ export default {
     <b-container>
       <b-row align-h="center" class="mt-5">
         <b-col md="4">
-          <input v-model="tipInput" class="w-100 tip-input" placeholder="Tip Percentage %" />
+          <input v-model="tipInput" class="w-100 tip-input" placeholder="% Tip Percentage" />
         </b-col>
       </b-row>
     </b-container>
@@ -65,7 +38,7 @@ export default {
     <b-container>
       <b-row align-h="center" class="mt-5">
         <b-col md="8">
-          <input v-model="billInput" class="w-50 bill-input" placeholder="Bill Total $" />
+          <input v-model="billInput" class="w-50 bill-input" placeholder="$ Bill Total" />
         </b-col>
       </b-row>
       <b-row align-h="center" class="mt-5">
